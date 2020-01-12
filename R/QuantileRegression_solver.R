@@ -38,6 +38,9 @@
 #'   The type of the problem, such as \code{Dantzig} and \code{SparseSVM}.
 #' }
 #' @examples
+#' ## Quantile Regression
+#' ## We set X to be standard normal random matrix and generate Y using gaussian noise
+#' ## with default quantile number to be 0.5.
 #' ## Generate the design matrix and coefficient vector
 #' n = 100 # sample number
 #' d = 250 # sample dimension

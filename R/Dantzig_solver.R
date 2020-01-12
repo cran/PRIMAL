@@ -37,6 +37,8 @@
 #'   The type of the problem, such as \code{Dantzig} and \code{SparseSVM}.
 #' }
 #' @examples
+#' ## Dantzig
+#' ## We set X to be standard normal random matrix and generate Y using gaussian noise.
 #' ## Generate the design matrix and coefficient vector
 #' n = 100 # sample number
 #' d = 250 # sample dimension

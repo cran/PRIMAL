@@ -20,12 +20,12 @@ void PSMresult::update(double lambda, VectorXd x, double y){
 	T++;
 }
 
-PSM::PSM(const MatrixXd& _A,
+PSM::PSM(const MatrixXd& _a,
 		 const VectorXd& _b,
 		 const VectorXd& _b_bar,
 		 const VectorXd& _c,
 		 const VectorXd& _c_bar
-		 ):A(_A),b(_b),b_bar(_b_bar),c(_c),c_bar(_c_bar){
+		 ):A(_a),b(_b),b_bar(_b_bar),c(_c),c_bar(_c_bar){
 	
 	M = A.rows();
 	N = A.cols();

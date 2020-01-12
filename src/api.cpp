@@ -3,7 +3,7 @@
 extern "C" void QuantileRegression_api(
 	int *_n,
 	int *_d,
-	double *_X,
+	double *_x,
 	double *_y,
  	double *_tau,
 	int *max_it,
@@ -28,7 +28,7 @@ extern "C" void QuantileRegression_api(
 	
 	for(int row = 0; row < n; ++row){
 		for(int col = 0; col < d; ++col){
-			X(row, col) = _X[row * d + col];
+			X(row, col) = _x[row * d + col];
 		}
 		y(row) = _y[row];
 	}
@@ -70,7 +70,7 @@ extern "C" void QuantileRegression_api(
 extern "C" void SparseSVM_api(
 	int *_n,
 	int *_d,
-	double *_X,
+	double *_x,
 	double *_y,
 	int *max_it,
 	double *lambda_threshold,
@@ -94,7 +94,7 @@ extern "C" void SparseSVM_api(
 	
 	for(int row = 0; row < n; ++row){
 		for(int col = 0; col < d; ++col){
-			X(row, col) = _X[row * d + col];
+			X(row, col) = _x[row * d + col];
 		}
 		y(row) = _y[row];
 	}
@@ -143,7 +143,7 @@ extern "C" void SparseSVM_api(
 extern "C" void Dantzig_api(
 	int *_n,
 	int *_d,
-	double *_X,
+	double *_x,
 	double *_y,
 	int *max_it,
 	double *lambda_threshold,
@@ -166,7 +166,7 @@ extern "C" void Dantzig_api(
 	
 	for(int row = 0; row < n; ++row){
 		for(int col = 0; col < d; ++col){
-			X(row, col) = _X[row * d + col];
+			X(row, col) = _x[row * d + col];
 		}
 		y(row) = _y[row];
 	}
@@ -204,7 +204,7 @@ extern "C" void Dantzig_api(
 extern "C" void CompressedSensing_api(
 	int *_n,
 	int *_d,
-	double *_X,
+	double *_x,
 	double *_y,
 	int *max_it,
 	double *lambda_threshold,
@@ -227,7 +227,7 @@ extern "C" void CompressedSensing_api(
 	
 	for(int row = 0; row < n; ++row){
 		for(int col = 0; col < d; ++col){
-			X(row, col) = _X[row * d + col];
+			X(row, col) = _x[row * d + col];
 		}
 		y(row) = _y[row];
 	}
@@ -266,7 +266,7 @@ extern "C" void CompressedSensing_api(
 extern "C" void ParametricSimplexMethod_api(
 	int *_M,
 	int *_N,
-	double *_A,
+	double *_a,
 	double *_b,
 	double *_b_bar,
 	double *_c,
@@ -291,7 +291,7 @@ extern "C" void ParametricSimplexMethod_api(
 	
 	for(int i = 0; i < M; ++i){
 		for(int j = 0; j < N; ++j){
-			A(i, j) = _A[i*N+j];
+			A(i, j) = _a[i*N+j];
 		}
 		b(i) = _b[i];
 		b_bar(i) = _b_bar[i];

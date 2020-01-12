@@ -42,7 +42,12 @@ An object with S3 class \code{"primal"} is returned:
   The type of the problem, such as \code{Dantzig} and \code{SparseSVM}.
 }
 }
+\description{
+Solve given compressed sensing problem in parametric simplex method
+}
 \examples{
+## Compressed Sensing
+## We set X to be standard normal random matrix and generate Y using gaussian noise.
 ## Generate the design matrix and coefficient vector
 n = 100 # sample number
 d = 250 # sample dimension
@@ -53,7 +58,7 @@ X = scale(matrix(rnorm(n*d),n,d)+c*rnorm(n))/sqrt(n-1)*sqrt(n)
 beta = c(rnorm(s), rep(0, d-s))
 ## Generate response using Gaussian noise, and solve the solution path
 noise = rnorm(n)
-Y = X%*%beta + noise
+Y = X\%*\%beta + noise
 ## Compressed Sensing solved with parametric simplex method
 fit.compressed = CompressedSensing_solver(X, Y, max_it = 100, lambda_threshold = 0.01)
 ###lambdas used
@@ -62,9 +67,6 @@ print(fit.compressed$lambda)
 print(fit.compressed$df)
 ## Visualize the solution path
 plot(fit.compressed)
-}
-\description{
-Solve given compressed sensing problem in parametric simplex method
 }
 \seealso{
 \code{\link{primal-package}}, \code{\link{Dantzig_solver}}

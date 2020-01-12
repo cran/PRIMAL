@@ -49,6 +49,9 @@ An object with S3 class \code{"primal"} is returned:
 Solve given quantile regression problem in parametric simplex method
 }
 \examples{
+## Quantile Regression
+## We set X to be standard normal random matrix and generate Y using gaussian noise
+## with default quantile number to be 0.5.
 ## Generate the design matrix and coefficient vector
 n = 100 # sample number
 d = 250 # sample dimension

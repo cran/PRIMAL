@@ -1,8 +1,8 @@
 Package: PRIMAL
 Type: Package
 Title: Parametric Simplex Method for Sparse Learning
-Version: 1.0.0
-Date: 2019-09-18
+Version: 1.0.1
+Date: 2020-01-10
 Author: Zichong Li, Qianli Shen
 Maintainer: Zichong Li <zichongli5@gmail.com>
 LinkingTo: Rcpp, RcppEigen
@@ -10,7 +10,7 @@ Description: Implements a unified framework of parametric simplex method for a v
 Imports: Matrix
 License: GPL (>= 2)
 NeedsCompilation: yes
-Packaged: 2019-09-26 17:15:23 UTC; lizichong
+Packaged: 2020-01-12 10:34:04 UTC; lizichong
 RoxygenNote: 6.1.1
 Repository: CRAN
-Date/Publication: 2019-10-02 10:00:08 UTC
+Date/Publication: 2020-01-12 14:40:18 UTC

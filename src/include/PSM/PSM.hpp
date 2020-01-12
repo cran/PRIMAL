@@ -47,7 +47,7 @@ public:
 	MatrixXd Eta;
 	MatrixXd A_N_t;
 
-	PSM(const MatrixXd& _A,
+	PSM(const MatrixXd& _a,
 		const VectorXd& _b,
 		const VectorXd& _b_bar,
 		const VectorXd& _c,

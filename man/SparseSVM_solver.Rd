@@ -49,6 +49,9 @@ An object with S3 class \code{"primal"} is returned:
 Solve given Sparse SVM problem in parametric simplex method
 }
 \examples{
+## SparseSVM
+## We set the X matrix to be normal random matrix and Y is a vector consists of -1 and 1
+## with the number of iteration to be 1000.
 ## Generate the design matrix and coefficient vector
 n = 200 # sample number
 d = 100 # sample dimension

@@ -43,6 +43,35 @@
 #' \item{type}{
 #'   The type of the problem, such as \code{Dantzig} and \code{SparseSVM}.
 #' }
+#' @examples
+#' ## This example show how to use PSM_solver() to solve dantzig problem.
+#' ## Generate the design matrix and coefficient vector
+#' n = 100 # sample number
+#' d = 250 # sample dimension
+#' c = 0.5 # correlation parameter
+#' s = 20  # support size of coefficient
+#' set.seed(1024)
+#' X = scale(matrix(rnorm(n*d),n,d)+c*rnorm(n))/sqrt(n-1)*sqrt(n)
+#' beta = c(rnorm(s), rep(0, d-s))
+#' ## Generate response using Gaussian noise, and solve the solution path
+#' noise = rnorm(n)
+#' Y = X%*%beta + noise
+#' ## Define parameters for dantzig problem
+#' XtX = t(X)%*%X
+#' A = cbind(cbind(rbind(XtX,-XtX),-rbind(XtX,-XtX)),diag(rep(1,2*d)))
+#' b = rbind(t(X)%*%Y,-t(X)%*%Y)
+#' c = c(rep(-1,2*d),rep(0,2*d))
+#' c_bar = rep(0,4*d)
+#' b_bar = rep(1,2*d)
+#' B_init = seq(2*d,4*d-1)
+#' ## Dantzig selection solved with parametric simplex method
+#' fit.dantzig = PSM_solver(A, b, b_bar, c, c_bar, B_init, max_it = 50, lambda_threshold = 0.01)
+#' ###lambdas used
+#' print(fit.dantzig$lambda)
+#' ## number of nonzero coefficients for each lambda
+#' print(fit.dantzig$df)
+#' ## Visualize the solution path
+#' plot(fit.dantzig)
 #' @seealso \code{\link{primal-package}}
 #' @export
 PSM_solver <- function(A, b, b_bar, c, c_bar, B_init = NULL, max_it = 50, lambda_threshold = 0.01) {

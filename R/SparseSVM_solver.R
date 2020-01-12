@@ -40,6 +40,9 @@
 #'   The type of the problem, such as \code{Dantzig} and \code{SparseSVM}.
 #' }
 #' @examples
+#' ## SparseSVM
+#' ## We set the X matrix to be normal random matrix and Y is a vector consists of -1 and 1
+#' ## with the number of iteration to be 1000.
 #' ## Generate the design matrix and coefficient vector
 #' n = 200 # sample number
 #' d = 100 # sample dimension

@@ -11,7 +11,7 @@
 extern "C" void QuantileRegression_api(
 	int *_n,
 	int *_d,
-	double *_X,
+	double *_x,
 	double *_y,
  	double *_tau,
  	int *max_it,
@@ -25,7 +25,7 @@ extern "C" void QuantileRegression_api(
 extern "C" void SparseSVM_api(
  	int *_n,
 	int *_d,
-	double *_X,
+	double *_x,
 	double *_y,
 	int *max_it,
 	double *lambda_threshold,
@@ -39,7 +39,7 @@ extern "C" void SparseSVM_api(
 extern "C" void Dantzig_api(
 	int *_n,
 	int *_d,
-	double *_X,
+	double *_x,
 	double *_y,
 	int *max_it,
 	double *lambda_threshold,
@@ -52,7 +52,7 @@ extern "C" void Dantzig_api(
 extern "C" void CompressedSensing_api(
  	int *_n,
 	int *_d,
-	double *_X,
+	double *_x,
 	double *_y,
 	int *max_it,
 	double *lambda_threshold,
@@ -65,7 +65,7 @@ extern "C" void CompressedSensing_api(
 extern "C" void ParametricSimplexMethod_api(
 	int *_M,
 	int *_N,
-	double *_A,
+	double *_a,
 	double *_b,
 	double *_b_bar,
 	double *_c,

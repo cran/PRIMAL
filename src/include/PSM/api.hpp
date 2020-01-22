@@ -63,8 +63,8 @@ extern "C" void CompressedSensing_api(
 );
 
 extern "C" void ParametricSimplexMethod_api(
-	int *_M,
-	int *_N,
+	int *_m,
+	int *_n,
 	double *_a,
 	double *_b,
 	double *_b_bar,

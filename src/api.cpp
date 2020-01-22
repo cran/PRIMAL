@@ -264,8 +264,8 @@ extern "C" void CompressedSensing_api(
 }
 
 extern "C" void ParametricSimplexMethod_api(
-	int *_M,
-	int *_N,
+	int *_m,
+	int *_n,
 	double *_a,
 	double *_b,
 	double *_b_bar,
@@ -279,8 +279,8 @@ extern "C" void ParametricSimplexMethod_api(
 	double *y_list,
 	int *B_init
  ){
-	int M = *_M;
-	int N = *_N;
+	int M = *_m;
+	int N = *_n;
 	int d = N;
 	MatrixXd A(M, N);
 	VectorXd b(M);

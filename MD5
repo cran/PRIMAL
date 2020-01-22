@@ -1,4 +1,4 @@
-d2f45f6d0ca8f24a4d59a7cbf1f6e2ad *DESCRIPTION
+cd129839f80b5e821902a43e46d0a77a *DESCRIPTION
 23c0e3cf7fc6157f48d9c534f50af778 *NAMESPACE
 a8fddfd65ad0defe9e32e72860dcc376 *R/CompressedSensing_solver.R
 ccda8a460288579821dca77b74116b73 *R/Dantzig_solver.R
@@ -24,8 +24,8 @@ bb8ffa645c65c5bd412f9827f3be79c4 *man/print.primal.Rd
 6567dc2c37e2d43391f00027a94fe291 *src/Makevars
 6567dc2c37e2d43391f00027a94fe291 *src/Makevars.win
 2d864a32cb4ea090628a72bf3aa1fa58 *src/PSM.cpp
-e9c05f9850c779d75bbd9ea43de6f677 *src/api.cpp
+6140908de8775de3020cd1dcb36c44c0 *src/api.cpp
 ea8feb085141a95297637adb4a784a1e *src/include/PSM/PSM.hpp
-18921ff2b99b3ff110f8bccba7919111 *src/include/PSM/api.hpp
+3d62c7b8e6002124ad05bb54c9c883f5 *src/include/PSM/api.hpp
 b05a678d0dcf1f63c5740047f40a453f *vignettes/primal.pdf
 ac67514d297d32c82d409fc2d7a676ec *vignettes/vignette.Rnw
